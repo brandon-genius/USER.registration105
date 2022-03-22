@@ -1,0 +1,47 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(95, 94, 94);
+    text-shadow: 1px 1px 4px;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+.capture-form{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px gray;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.capture-form h3{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 5px 0px 10px 0;
+}
+#btnSave{
+    margin: 10px;
+}
+
+.alert-error{
+    border: 1px solid blue;
+    background-color: red;
+    color: burlywood;
+    padding: 5px;
+}
+
+.input-error{
+    border: 1px solid blue;
+    background-color: red;
+}
+.hide{
+    display: none;
+}

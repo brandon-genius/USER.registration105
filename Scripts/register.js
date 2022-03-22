@@ -14,25 +14,46 @@ class User{
     }    
 }
 
+function isValid(user){
+    let valid=true;
+
+    $('input').removeClass('input-error');
+    if(user.email.length==0){
+        valid=false;
+        $('#txtemail').addClass('input-error');
+    }
+    if(user.password.length==0){
+        valid=false;
+        $('#txtpassword').addClass('input-error');
+    }
+
+    if(!valid){
+        console.error('Missing Data');
+        $('#alertError').removeClass("hide");
+    }
+
+    return valid;
+}
+
 function register(){
-    let inputFirstName = jQuery('#txtfname').val();
-    let inputLastName = jQuery('#txtlName').val();
-    let inputEmail = jQuery('#txtemail').val();
-    let inputPassword = jQuery('#txtpassword').val();
-    let inputAge = jQuery('#txtage').val();
-    let inputAddress = jQuery('#txtaddress').val();
-    let inputCardNumber = jQuery('#txtCardNumber').val();
-    let inputPhone = jQuery('#txtphone').val();
-    let inputColor = jQuery('#txtcolor').val();
+    let inputFirstName = $('#txtfname').val();
+    let inputLastName = $('#txtlName').val();
+    let inputEmail = $('#txtemail').val();
+    let inputPassword = $('#txtpassword').val();
+    let inputAge = $('#txtage').val();
+    let inputAddress = $('#txtaddress').val();
+    let inputCardNumber = $('#txtCardNumber').val();
+    let inputPhone = $('#txtphone').val();
+    let inputColor = $('#txtcolor').val();
 
     console.log(inputFirstName,inputLastName,inputEmail,inputPassword,inputAge,inputAge,inputAddress,inputCardNumber,inputPhone,inputColor);
 //create the user
     let theUser = new User(inputFirstName,inputLastName,inputEmail,inputPassword,inputAge,inputAge,inputAddress,inputCardNumber,inputPhone,inputColor)
-//validate the user
-
-    console.log(theUser);
-//clear inputs
-    $('input').val('');
+    if(isValid(theUser)){
+        saveUser(theUser);
+        //clear the inputs
+        $('input').val('');
+    }
 }
 
 function init(){
