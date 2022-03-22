@@ -30,6 +30,9 @@ function isValid(user){
     if(!valid){
         console.error('Missing Data');
         $('#alertError').removeClass("hide");
+        setTimeout(function(){
+            $('#alertError').addClass('hide');
+        }, 3000);
     }
 
     return valid;
