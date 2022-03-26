@@ -10,13 +10,12 @@ body{
 h1{
     text-align: center;
     background-color: rgb(95, 94, 94);
-    text-shadow: 1px 1px 4px;
-    text-decoration: underline;
+    text-shadow: 2px 2px 4px 5px;
     letter-spacing: 2px;
 }
 .capture-form{
     background-color: white;
-    box-shadow: 1px 1px 1px 1px gray;
+    box-shadow: 2px 2px 1px 3px gray;
     width: 400px;
     padding: 20px;
     border-radius: 5px;

@@ -14,6 +14,7 @@
         <div class="container">
           <a class="navbar-brand" href="index.html">Home</a>
           <a class="navbar-brand" href="register.html">Register</a>
+          <a class="navbar-brand" href="users.html">Users</a>
         </div>
         </nav>
         <h1>
@@ -22,8 +23,30 @@
     
       </header>
       <main>
+        <form class="capture-form" action="#" >
+
+          <h3>Login Page</h3>
+
+          <p id="alertError" class="alert-error hide">
+            Authentication Failed
+          </p>
+
+          <div class="input-container">
+            <label for="fName"><b>Username:</b></label>
+            <input type="text" class="form-control" id="txtfname" />
+          </div>
+
+          <div class="input-container">
+            <label for="password" class="form-label"><b>Password:</b></label>
+            <input type="password" class="form-control" id="txtpassword" />
+          </div>
+
+          <button class="btn btn-primary" id="btnSave" onclick="login">Login</button>
+        </form>
 
       </main>
-    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="/USER.registration/Scripts/storeManager.js"></script>
+      <script src="/USER.registration/Scripts/register.js"></script>
 </body>
 </html>
