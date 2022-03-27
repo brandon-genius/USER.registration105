@@ -44,7 +44,7 @@ function validatePass(){
         txtPass.css("border","1px solid green");
         hideError();
     }
-
+}
 function displayError(msg){
     $('#alertError').removeClass("hide").text(msg);
 }
@@ -93,4 +93,5 @@ function init(){
     $('#txtpassword').change(validatePass);
 }
 
-window.onload=init
+
+window.onload = init;
